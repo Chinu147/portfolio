@@ -190,8 +190,23 @@
   }
   .project-title{font-family:'Instrument Serif',serif;font-size:clamp(1.8rem,3.4vw,2.8rem);}
   .project-desc{max-width:420px;color:var(--ink-muted);font-size:0.95rem;line-height:1.6;text-align:right;}
-  .project .frame{aspect-ratio:21/9;}
+  .project .frame{aspect-ratio:16/9;}
   .project .frame video{height:100%;}
+
+  /* vertical (9:16) project videos get their own portrait frame instead of being cropped */
+  .project .frame.vertical{
+    aspect-ratio:9/16;
+    width:min(360px, 100%);
+    margin:0 auto;
+  }
+  .project .frame.vertical::before,
+  .project .frame.vertical::after{
+    height:2.2rem;
+  }
+  .project .frame.vertical .corner.tl,.project .frame.vertical .corner.tr{top:2.8rem;}
+  .project .frame.vertical .corner.bl,.project .frame.vertical .corner.br{bottom:2.8rem;}
+  .project .frame.vertical .corner.tl,.project .frame.vertical .corner.bl{left:0.7rem;}
+  .project .frame.vertical .corner.tr,.project .frame.vertical .corner.br{right:0.7rem;}
   .tag-row{display:flex;gap:0.6rem;margin-top:1rem;flex-wrap:wrap;}
   .tag{
     font-family:'IBM Plex Mono',monospace;font-size:0.65rem;
@@ -320,7 +335,7 @@
       <div class="project-title">Bruno Milano</div>
       <div class="project-desc">A luxury watch ad built on light, texture, and restraint — every frame anchored to a single reference still to keep the dial and logo distortion-free.</div>
     </div>
-    <div class="frame">
+    <div class="frame vertical">
       <div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
       <video controls muted playsinline poster="">
         <source src="InShot_20260715_184221409.mp4" type="video/mp4">
@@ -348,7 +363,7 @@
       <div class="project-title">The Skin Story</div>
       <div class="project-desc">Hair growth serum, sold on proof and clarity — close, tactile shots that let the product do the talking.</div>
     </div>
-    <div class="frame">
+    <div class="frame vertical">
       <div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
       <video controls muted playsinline>
         <source src="Mumbaicleangirl%20The%20Skin%20Story%20AD.mp4" type="video/mp4">
@@ -362,7 +377,7 @@
       <div class="project-title">eeken by Paragon</div>
       <div class="project-desc">Sneaker energy — quick cuts, confident motion, built for feed scroll-stopping over a full narrative arc.</div>
     </div>
-    <div class="frame">
+    <div class="frame vertical">
       <div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
       <video controls muted playsinline>
         <source src="ugc_suraj_b7e4ac14_1.mp4" type="video/mp4">

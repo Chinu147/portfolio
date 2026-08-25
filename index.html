@@ -223,9 +223,11 @@
 
   /* workflow */
   .workflow{border-top:1px solid var(--hairline);}
-  .workflow-body{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;}
-  .workflow .frame{aspect-ratio:4/3;}
-  .steps{list-style:none;}
+  .workflow-body{display:flex;flex-direction:column;gap:3rem;}
+  .workflow .frame{aspect-ratio:1.9/1;width:100%;}
+  .workflow .frame video{object-fit:contain;background:#000;}
+  .steps{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:0 3rem;}
+  .steps li{border-bottom:1px solid var(--hairline);}
   .steps li{
     display:flex;gap:1.2rem;padding:1.4rem 0;
     border-bottom:1px solid var(--hairline);
@@ -270,6 +272,7 @@
     .project-meta{flex-direction:column;align-items:flex-start;}
     .project-desc{text-align:left;}
     .workflow-body{grid-template-columns:1fr;}
+    .steps{grid-template-columns:1fr;}
     .frame::before,.frame::after{height:8vw;}
     .corner.tl,.corner.tr{top:9vw;}
     .corner.bl,.corner.br{bottom:9vw;}
@@ -317,7 +320,7 @@
       <p>From luxury watches and sneakers to beauty and grooming products, I craft cinematic, scroll-stopping content that helps brands stand out.</p>
       <div class="stat-row">
         <div class="stat"><b>8+</b><span>YEARS EXPERIENCE</span></div>
-        <div class="stat"><b>5</b><span>BRAND CAMPAIGNS</span></div>
+        <div class="stat"><b>7</b><span>BRAND CAMPAIGNS</span></div>
         <div class="stat"><b>3</b><span>AI TOOLS IN PIPELINE</span></div>
       </div>
     </div>
@@ -384,6 +387,34 @@
       </video>
     </div>
     <div class="tag-row"><span class="tag">FOOTWEAR</span><span class="tag">SOCIAL AD</span></div>
+  </div>
+
+  <div class="project">
+    <div class="project-meta">
+      <div class="project-title">The Man Company</div>
+      <div class="project-desc">A fragrance ad built on mood over close-up detail — warm light and slow motion doing the selling instead of hard product shots.</div>
+    </div>
+    <div class="frame">
+      <div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
+      <video controls muted playsinline>
+        <source src="InShot_20260825_153044363.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="tag-row"><span class="tag">FRAGRANCE</span><span class="tag">BRAND AD</span></div>
+  </div>
+
+  <div class="project">
+    <div class="project-meta">
+      <div class="project-title">Radha Farms</div>
+      <div class="project-desc">Fresh-cut energy for a microgreens brand — quick, natural shots that lean into the "straight from the farm" feel rather than a polished studio look.</div>
+    </div>
+    <div class="frame vertical">
+      <div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
+      <video controls muted playsinline>
+        <source src="RF%20Ad.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="tag-row"><span class="tag">MICROGREENS</span><span class="tag">UGC STYLE</span></div>
   </div>
 
   <div class="project placeholder">
